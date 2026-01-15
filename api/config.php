@@ -1,14 +1,19 @@
 <?php
-// MODE: sandbox | live
-define('PAYPAL_MODE', 'sandbox');
+// ===============================
+// PAYPAL CONFIG
+// ===============================
+define('PAYPAL_MODE', 'sandbox'); // sandbox | live
 
-// Sandbox credentials
-define('PAYPAL_CLIENT_ID', 'ISI_CLIENT_ID_SANDBOX');
-define('PAYPAL_SECRET', 'ISI_SECRET_SANDBOX');
+define('PAYPAL_CLIENT_ID', 'ISI_CLIENT_ID_KAMU');
+define('PAYPAL_SECRET', 'ISI_SECRET_KAMU');
 
-// API Base URL
 define('PAYPAL_API_BASE',
-    PAYPAL_MODE === 'sandbox'
-        ? 'https://api-m.sandbox.paypal.com'
-        : 'https://api-m.paypal.com'
+    PAYPAL_MODE === 'live'
+        ? 'https://api-m.paypal.com'
+        : 'https://api-m.sandbox.paypal.com'
 );
+
+// ===============================
+// EXCHANGE CONFIG
+// ===============================
+define('EXCHANGE_FEE_PERCENT', 5); // fee 5%
