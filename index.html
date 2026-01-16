@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Tukar Saldo PayPal ke IDR</title>
+  <title>Tukar Saldo PayPal ke Rupiah</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -12,118 +12,67 @@
       margin: 0;
       padding: 0;
     }
-
     .container {
       max-width: 720px;
       margin: 40px auto;
-      background: #ffffff;
+      background: #fff;
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-
-    h1 {
-      text-align: center;
-      color: #222;
-    }
-
+    h1 { text-align: center; margin-bottom: 5px; }
     .subtitle {
       text-align: center;
-      color: #666;
-      margin-bottom: 30px;
+      color: #555;
+      margin-bottom: 25px;
+      font-size: 15px;
     }
-
     .box {
       background: #f9fafb;
       padding: 20px;
       border-radius: 8px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
-
-    h3 {
-      margin-top: 0;
-      color: #333;
-    }
-
-    ul, ol {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 8px;
-      color: #444;
-    }
-
     .warning {
       background: #fff3cd;
       color: #856404;
       padding: 15px;
       border-radius: 8px;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-size: 14px;
     }
-
-    .calc input {
+    input {
       width: 100%;
       padding: 12px;
-      font-size: 16px;
       margin-top: 8px;
       margin-bottom: 12px;
       border-radius: 6px;
       border: 1px solid #ccc;
     }
-
     .result {
       background: #eef2ff;
       padding: 15px;
       border-radius: 8px;
-      margin-top: 10px;
-      font-size: 15px;
+      font-size: 14px;
     }
-
     .cta {
       text-align: center;
-      margin-top: 30px;
+      margin-top: 25px;
     }
-
-    .cta button {
-      background: #25D366;
-      color: #fff;
-      border: none;
+    button {
       padding: 15px 25px;
-      font-size: 16px;
+      border: none;
       border-radius: 8px;
+      font-size: 16px;
       cursor: pointer;
+      color: #fff;
+      width: 100%;
+      max-width: 300px;
     }
-
+    .wa { background: #25D366; }
+    .confirm { background: #0d6efd; margin-top: 12px; }
     .footer {
       text-align: center;
       font-size: 13px;
       color: #777;
       margin-top: 30px;
-    }
-
-    .footer a {
-      color: #777;
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
-<div class="container">
-
-  <h1>Tukar Saldo PayPal ke IDR</h1>
-  <p class="subtitle">Proses manual & aman melalui WhatsApp</p>
-
-  <div class="warning">
-    ⚠️ Website ini <strong>tidak memproses pembayaran otomatis</strong>.  
-    Kalkulator hanya sebagai <strong>estimasi</strong>.
-  </div>
-
-  <div class="box">
-    <h3>Kalkulator Estimasi</h3>
-
-    <div class="calc">
-      <label>Masukkan saldo PayPal (USD)</label>
-      <input type="number" id="usd" placeholder
