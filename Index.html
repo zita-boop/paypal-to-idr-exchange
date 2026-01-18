@@ -1,51 +1,110 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PayRupiah</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayRupiah | Kalkulator PayPal ke Rupiah</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Kalkulator PayPal ke Rupiah dengan estimasi fee dan konfirmasi via WhatsApp.">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- PWA (nanti kita aktifkan) -->
+  <!-- <link rel="manifest" href="manifest.json"> -->
 </head>
+
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
   <header class="header">
-    <div class="brand">
-      <div class="logo"></div>
-      <span>PayRupiah</span>
+    <div class="header-left">
+      <div class="logo-circle">
+        <!-- logo png nanti -->
+        <img src="logo.png" alt="PayRupiah Logo">
+      </div>
+      <span class="brand-name">PayRupiah</span>
     </div>
-    <div class="status">● Online</div>
+
+    <div class="header-right">
+      <span class="status online">● Online</span>
+      <button class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+    </div>
   </header>
 
-  <!-- KALKULATOR -->
-  <section class="card">
-    <h1>Kalkulator PayPal → Rupiah</h1>
+  <!-- ================= MAIN ================= -->
+  <main class="container">
 
-    <div class="form">
-      <input type="number" placeholder="Nominal PayPal (USD)">
-      <input type="number" value="16300">
-      <input type="text" placeholder="Fee (USD)" disabled>
-      <input type="text" placeholder="Diterima (IDR)" disabled>
-    </div>
+    <!-- BRAND LOGO -->
+    <section class="brand-center">
+      <img src="logo.png" alt="PayRupiah" class="brand-logo">
+    </section>
 
-    <label class="agree">
-      <input type="checkbox">
-      Saya menyetujui <a href="#">Syarat & Ketentuan</a>
-    </label>
+    <!-- ================= KALKULATOR ================= -->
+    <section class="card">
+      <h1>Kalkulator PayPal → Rupiah</h1>
 
-    <p class="note">* Estimasi. Kurs dikunci saat admin konfirmasi.</p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nominal PayPal (USD)</label>
+          <input type="number" placeholder="Contoh: 50">
+        </div>
 
-    <button disabled>Lanjutkan via WhatsApp</button>
-  </section>
+        <div class="form-group">
+          <label>Kurs USD (IDR)</label>
+          <input type="number" value="16300">
+        </div>
 
-  <!-- FOOTER -->
+        <div class="form-group">
+          <label>Fee (USD)</label>
+          <input type="text" disabled>
+        </div>
+
+        <div class="form-group">
+          <label>Diterima (IDR)</label>
+          <input type="text" disabled>
+        </div>
+      </div>
+
+      <label class="checkbox">
+        <input type="checkbox">
+        Saya menyetujui <a href="term.html">Syarat & Ketentuan</a>
+      </label>
+
+      <p class="note">
+        * Estimasi. Kurs dikunci saat admin konfirmasi.
+      </p>
+
+      <button class="btn-primary" disabled>
+        Lanjutkan via WhatsApp
+      </button>
+    </section>
+
+    <!-- ================= INFO TAMBAHAN ================= -->
+    <section class="info">
+      <p><strong>Fee Layanan:</strong></p>
+      <ul>
+        <li>$5 – $49 → $1</li>
+        <li>$50 – $99 → $1.7</li>
+        <li>$100 – $199 → $2.5</li>
+        <li>> $200 → $5</li>
+      </ul>
+
+      <p class="contact">
+        📞 Admin WhatsApp: <strong>08xxxxxxxxxx</strong>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
   <footer class="footer">
-    <div>FAQ</div>
-    <div>S&K</div>
-    <div>Disclaimer</div>
+    <a href="faq.html">FAQ</a>
+    <a href="trust.html">Trust</a>
+    <a href="term.html">S&K</a>
+    <a href="disclaimer.html">Disclaimer</a>
   </footer>
 
 </body>
-</html>
+        </html>
