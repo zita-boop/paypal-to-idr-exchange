@@ -23,32 +23,25 @@ body {
 }
 
 /* ===== Menu Horizontal ===== */
-.menu {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
 .menu a {
   display: inline-block;
-  padding: 10px 18px;
+  padding: 6px 12px;        /* sebelumnya 10px 18px */
   background: #f1f9ff;
   border: 2px solid #0070ba;
-  border-radius: 8px;
+  border-radius: 6px;        /* sedikit lebih kecil */
   text-decoration: none;
   color: #0070ba;
   font-weight: bold;
+  font-size: 0.9rem;         /* sedikit lebih kecil */
   transition: all 0.3s ease;
 }
 
 .menu a:hover {
   background: #0070ba;
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transform: translateY(-1px);  /* animasi hover lebih lembut */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
-
 .menu a.active {
   background: #0070ba;
   color: #fff;
