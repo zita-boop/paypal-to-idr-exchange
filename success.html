@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instruksi Transaksi</title>
+
+<style>
+body{
+  margin:0;
+  background:linear-gradient(135deg,#e3f2fd,#f5faff);
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.box{
+  background:#fff;
+  padding:30px;
+  max-width:420px;
+  width:100%;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 25px 45px rgba(26,115,232,.25);
+  animation:fade .8s ease;
+}
+
+@keyframes fade{
+  from{opacity:0; transform:translateY(30px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
+h2{
+  color:#1a73e8;
+  margin-bottom:6px;
+}
+
+.status{
+  font-size:14px;
+  color:#555;
+  margin-bottom:20px;
+}
+
+.steps{
+  text-align:left;
+  font-size:14px;
+}
+
+.step{
+  opacity:0;
+  transform:translateX(-10px);
+  margin:10px 0;
+  transition:.4s;
+}
+
+.step.active{
+  opacity:1;
+  transform:translateX(0);
+}
+
+.check{
+  color:#2e7d32;
+  font-weight:bold;
+  margin-right:6px;
+}
+
+.timer{
+  margin-top:18px;
+  font-size:14px;
+  color:#1a73e8;
+  font-weight:600;
+}
+
+.final{
+  display:none;
+  margin-top:20px;
+  color:#2e7d32;
+  font-weight:700;
+  font-size:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Proses Transaksi</h2>
+  <div class="status" id="statusText">
+    ⏳ Menunggu bukti transfer dari Anda
+  </div>
+
+  <div class="steps">
+    <div class="step" id="s1">📌 Kirim bukti transfer Rupiah via WhatsApp</div>
+    <div class="step" id="s2">📌 Admin melakukan pengecekan</div>
+    <div class="step" id="s3">📌 Kirim saldo PayPal ke email tujuan</div>
+  </div>
+
+  <div class="timer" id="timer"></div>
+
+  <div class="final" id="finalText">
+    ✅ Silakan kirim saldo PayPal sekarang
+  </div>
+</div>
+
+<script>
+const steps = [
+  document.getElementById("s1"),
+  document.getElementById("s2"),
+  document.getElementById("s3")
+];
+
+let count = 10; // detik simulasi
+const timerEl = document.getElementById("timer");
+const statusText = document.getElementById("statusText");
+const finalText = document.getElementById("finalText");
+
+// TAMPILKAN STEP SATU PER SATU
+steps.forEach((el, i) => {
+  setTimeout(() => {
+    el.classList.add("active");
+    el.innerHTML = `<span class="check">✔</span>` + el.innerText;
+  }, (i + 1) * 1000);
+});
+
+// COUNTDOWN
+const interval = setInterval(() => {
+  timerEl.innerText = `⏱ Menunggu konfirmasi (${count}s)`;
+  count--;
+
+  if (count < 0) {
+    clearInterval(interval);
+    timerEl.innerText = "";
+    statusText.innerText = "Status: Dikonfirmasi";
+    finalText.style.display = "block";
+  }
+}, 1000);
+</script>
+
+</body>
+  </html>
