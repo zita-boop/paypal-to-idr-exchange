@@ -174,3 +174,37 @@ button#waBtn:disabled {
   text-align: center;
   margin-bottom: 10px; /* jarak ke menu */
   }
+/* ===== Logo ===== */
+.logo {
+  text-align: center;
+  margin-bottom: 5px; /* dikurangi supaya logo lebih dekat ke judul */
+}
+
+.logo img {
+  width: 220px;      /* ukuran logo besar */
+  border-radius: 0;  /* tetap tidak bulat */
+  padding: 0;
+  background: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+/* ===== Keterangan / Judul ===== */
+.logo-title {
+  text-align: center;
+  margin-top: 0;       /* rapat ke logo */
+  margin-bottom: 10px; /* jarak ke menu */
+}
+
+.logo-title h2 {
+  font-size: 1.5rem;
+  color: #0070ba;
+  font-weight: bold;
+  margin: 0;
+}
+
+.logo-title p {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0 0 0;
+  }
