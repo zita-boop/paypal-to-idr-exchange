@@ -5,8 +5,8 @@ const warningText = document.getElementById("warning");
 const noteText = document.getElementById("note");
 const waBtn = document.getElementById("waBtn");
 
-const RATE = 16500;                  // Kurs USD
-const WA_NUMBER = "6281234567890";   // Ganti nomor admin
+const RATE = 16500;
+const WA_NUMBER = "6281234567890"; // ganti nomor admin
 
 usdInput.addEventListener("input", () => {
   const usd = parseFloat(usdInput.value);
@@ -30,7 +30,6 @@ usdInput.addEventListener("input", () => {
 
   warningText.style.display = "none";
 
-  // Hitung fee otomatis
   let feeUSD = 0;
   if (usd < 10) feeUSD = 0.7;
   else if (usd < 50) feeUSD = 1;
@@ -40,17 +39,12 @@ usdInput.addEventListener("input", () => {
   else feeUSD = 3;
 
   feeInput.value = `$${feeUSD}`;
-
-  // Total IDR = (USD – Fee) * RATE
   const totalIDR = (usd - feeUSD) * RATE;
   idrInput.value = "Rp " + totalIDR.toLocaleString("id-ID");
-
-  noteText.style.display = "block"; // tampilkan hijau
-
+  noteText.style.display = "block";
   waBtn.disabled = false;
 });
 
-// Tombol WhatsApp
 waBtn.addEventListener("click", () => {
   const usd = parseFloat(usdInput.value);
   if (usd < 5) return;
