@@ -74,3 +74,11 @@ Mohon info langkah selanjutnya 🙏
   const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank");
 });
+.note-text {
+  display: none;       /* default tidak tampil */
+  color: #28a745;      /* hijau terang */
+  font-weight: bold;
+  margin-top: 4px;
+  font-size: 0.9rem;
+  display: block;      /* tampilkan di bawah input */
+      }
