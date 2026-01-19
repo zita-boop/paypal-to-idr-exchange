@@ -137,9 +137,17 @@ button#waBtn:disabled {
 /* ===== Logo PayRupiah sederhana & besar (tidak bulat) ===== */
 .logo {
   text-align: center;
-  margin-bottom: 40px; /* jarak ke menu */
+  margin-bottom: 20px; /* jarak ke menu */
 }
 
+.logo img {
+  width: 220px;       /* diperbesar dari 180px */
+  border-radius: 0;   /* tetap tidak bulat */
+  padding: 0;         /* tanpa padding */
+  background: none;   /* tanpa warna/gradien */
+  border: none;       /* tanpa border */
+  box-sizing: border-box;
+}
 .logo img {
   width: 250px;       /* ukuran besar */
   border-radius: 0;   /* tidak bulat */
