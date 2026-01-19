@@ -189,22 +189,22 @@ button#waBtn:disabled {
   box-sizing: border-box;
 }
 
-/* ===== Keterangan / Judul ===== */
+/* ===== Keterangan / Judul di atas menu (diperkecil) ===== */
 .logo-title {
   text-align: center;
   margin-top: 0;       /* rapat ke logo */
-  margin-bottom: 10px; /* jarak ke menu */
+  margin-bottom: 8px;  /* jarak ke menu */
 }
 
 .logo-title h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;   /* ukuran judul lebih kecil */
   color: #0070ba;
   font-weight: bold;
   margin: 0;
 }
 
 .logo-title p {
-  font-size: 1rem;
+  font-size: 0.9rem;   /* ukuran deskripsi lebih kecil */
   color: #333;
-  margin: 5px 0 0 0;
-  }
+  margin: 4px 0 0 0;
+}
