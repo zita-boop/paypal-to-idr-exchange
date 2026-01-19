@@ -134,17 +134,17 @@ button#waBtn:disabled {
   margin-left: 20px;
 }
 
-/* ===== Logo PayRupiah ala PayPal ===== */
+/* ===== Logo PayRupiah sederhana & besar (tidak bulat) ===== */
 .logo {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px; /* jarak ke menu */
 }
 
 .logo img {
-  width: 100px;                /* ukuran logo */
-  border-radius: 50%;          /* logo bulat */
-  padding: 5px;                /* jarak logo ke border */
-  background: linear-gradient(135deg, #003087, #009cde); /* gradien biru ala PayPal */
-  border: 4px solid #fff;      /* border putih luar */
+  width: 180px;       /* ukuran besar */
+  border-radius: 0;   /* tidak bulat */
+  padding: 0;         /* tanpa padding */
+  background: none;   /* tanpa warna/gradien */
+  border: none;       /* tanpa border */
   box-sizing: border-box;
-}
+  }
