@@ -1,81 +1,55 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PayRupiah</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PayRupiah - Tukar PayPal ke IDR</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
+<div class="container">
 
-    <!-- Logo -->
-    <div class="logo">
-      <img src="logo-payrupiah.png" alt="PayRupiah Logo">
-    </div>
-<!-- Menu horizontal di bawah logo -->
-<nav class="menu">
-  <a href="index.html">Home</a>
-  <a href="alamat.html">Alamat</a>
-  <a href="kontak.html">Kontak</a>
-  <a href="term.html">S&K</a>
-  <a href="info.html">Info Nominal</a> <!-- <-- LETAK LINK KE INFO.HTML -->
-  </nav>
-    <!-- Kalkulator -->
-    <div class="card">
-
-      <h1>Penukaran PayPal ke IDR</h1>
-
-      <div class="form-grid">
-
-        <div class="form-group">
-          <label>Nominal USD</label>
-          <input type="number" id="usd" placeholder="Contoh: 10" min="0" step="0.01">
-          <small id="warning" class="warning-text" style="display:none; color:red;">
-            Minimal penukaran adalah $5
-          </small>
-        </div>
-
-        <div class="form-group">
-          <label>Kurs USD</label>
-          <input type="text" value="1 USD = 16.500 IDR" disabled>
-        </div>
-
-        <div class="form-group">
-          <label>Fee (USD)</label>
-          <input type="text" id="fee" disabled>
-        </div>
-
-        <div class="form-group">
-          <label>Total Rupiah</label>
-          <input type="text" id="idr" disabled>
-          <small id="note" class="note-text" style="display:none; color:green;">
-            Sudah dipotong fee
-          </small>
-        </div>
-
-      </div>
-
-      <div class="checkbox">
-        <input type="checkbox" id="agree">
-        <label for="agree">
-          Saya setuju <a href="term.html">S&K</a>
-        </label>
-      </div>
-
-      <button class="button" id="waBtn" disabled>
-        Lanjut WhatsApp
-      </button>
-
-      <div class="info">
-        Fee dihitung otomatis sesuai nominal transaksi
-      </div>
-
-    </div>
-
+  <!-- Logo -->
+  <div class="logo">
+    <img src="logo-payrupiah.png" alt="PayRupiah Logo">
   </div>
 
-  <script src="script.js"></script>
+  <!-- Menu horizontal -->
+  <nav class="menu">
+    <a href="index.html" class="active">Home</a>
+    <a href="alamat.html">Alamat</a>
+    <a href="kontak.html">Kontak</a>
+    <a href="term.html">S&K</a>
+    <a href="info.html">Info Nominal</a>
+  </nav>
+
+  <!-- Card kalkulator -->
+  <div class="card">
+    <h1>Kalkulator Penukaran</h1>
+
+    <div class="form-group">
+      <label>Nominal USD:</label>
+      <input type="number" id="usd" placeholder="Masukkan nominal USD">
+    </div>
+
+    <div class="form-group">
+      <label>Fee USD:</label>
+      <input type="text" id="fee" disabled>
+    </div>
+
+    <div class="form-group">
+      <label>Total Rupiah:</label>
+      <input type="text" id="idr" disabled>
+      <small id="note" class="note-text">Sudah dipotong fee</small>
+      <small id="warning" class="warning-text">Minimal transaksi $5</small>
+    </div>
+
+    <button id="waBtn" disabled>Konfirmasi via WhatsApp</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
 </body>
-        </html>
+  </html>
