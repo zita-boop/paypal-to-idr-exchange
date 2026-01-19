@@ -148,3 +148,11 @@ button#waBtn:disabled {
   border: none;       /* tanpa border */
   box-sizing: border-box;
   }
+.logo img {
+  width: 180px !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  border: none !important;
+  box-sizing: border-box !important;
+  }
