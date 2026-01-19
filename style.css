@@ -1,44 +1,28 @@
-/* =====================
-   RESET
-===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Segoe UI', system-ui, sans-serif;
 }
 
 body {
-  background: linear-gradient(180deg, #e6f2ff, #ffffff);
+  background: linear-gradient(135deg, #009cde, #003087);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
+  color: #1a1a1a;
 }
 
-/* DARK MODE */
-body.dark {
-  background: #0b1c2d;
-  color: #fff;
-}
-
-/* =====================
-   CONTAINER
-===================== */
 .container {
-  width: 100%;
   max-width: 420px;
-  padding: 16px;
+  margin: auto;
 }
 
-/* =====================
-   HEADER
-===================== */
+/* ===== HEADER ===== */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .brand {
@@ -48,154 +32,119 @@ body.dark {
 }
 
 .brand img {
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
 }
 
 .brand span {
-  font-size: 18px;
+  color: #fff;
+  font-size: 20px;
   font-weight: 600;
-  color: #0070e0;
 }
 
 .badge-online {
-  background: #e6f7ed;
-  color: #1a7f37;
-  font-size: 11px;
-  padding: 3px 8px;
-  border-radius: 999px;
+  background: #22c55e;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
 
-.toggle {
-  cursor: pointer;
-  font-size: 18px;
-}
-
-/* =====================
-   CARD (KALKULATOR)
-===================== */
+/* ===== CARD ===== */
 .card {
   background: #ffffff;
   border-radius: 18px;
   padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 112, 224, 0.15);
-}
-
-/* DARK CARD */
-body.dark .card {
-  background: #12263a;
+  box-shadow: 0 15px 30px rgba(0,0,0,.15);
 }
 
 .card h1 {
   font-size: 18px;
   margin-bottom: 16px;
   text-align: center;
+  color: #003087;
 }
 
-/* =====================
-   FORM
-===================== */
+/* ===== FORM ===== */
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group.full {
-  grid-column: span 2;
-}
-
-label {
+.form-group label {
   font-size: 13px;
-  margin-bottom: 6px;
+  color: #444;
+  margin-bottom: 4px;
+  display: block;
 }
 
-input {
+.form-group input {
+  width: 100%;
   padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #cce0ff;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
   font-size: 14px;
-  background: #f8fbff;
 }
 
-input:disabled {
-  background: #eef4ff;
+.form-group input:disabled {
+  background: #f2f4f7;
   color: #555;
 }
 
-body.dark input {
-  background: #0e2236;
-  border-color: #1f3b5c;
-  color: #fff;
-}
-
-/* =====================
-   CHECKBOX
-===================== */
+/* ===== CHECKBOX ===== */
 .checkbox {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 14px;
   font-size: 13px;
-  margin: 16px 0;
 }
 
 .checkbox a {
-  color: #0070e0;
+  color: #009cde;
   text-decoration: none;
 }
 
-/* =====================
-   BUTTON
-===================== */
+/* ===== BUTTON ===== */
 .button {
   width: 100%;
+  margin-top: 16px;
   padding: 14px;
-  border-radius: 12px;
+  background: linear-gradient(135deg, #009cde, #0070ba);
   border: none;
-  background: #b3d9ff;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  cursor: not-allowed;
-  transition: 0.3s;
-}
-
-.button.active {
-  background: #0070e0;
+  border-radius: 14px;
   cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
-/* =====================
-   INFO
-===================== */
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,112,186,.35);
+}
+
+/* ===== INFO ===== */
 .info {
-  margin-top: 12px;
   font-size: 12px;
-  text-align: center;
   color: #666;
+  margin-top: 10px;
+  text-align: center;
 }
 
-body.dark .info {
-  color: #aaa;
-}
-
-/* =====================
-   MENU
-===================== */
+/* ===== MENU ===== */
 .menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 18px;
-  font-size: 13px;
 }
 
 .menu a {
-  color: #0070e0;
+  font-size: 12px;
+  color: #e6f4ff;
   text-decoration: none;
 }
