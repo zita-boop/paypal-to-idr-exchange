@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak | PayRupiah</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 520px;
+      margin: 70px auto;
+      padding: 24px;
+      background: #121a2f;
+      border-radius: 14px;
+      border: 1px solid rgba(0,112,186,0.25);
+      box-shadow: 0 15px 35px rgba(0,0,0,.45);
+      animation: fadeUp .6s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    p.desc {
+      text-align: center;
+      font-size: 14px;
+      color: #cfe6ff;
+      margin-bottom: 28px;
+    }
+
+    .contact-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #0f1a33, #0b1428);
+      border: 1px solid rgba(0,112,186,0.2);
+      margin-bottom: 16px;
+      transition: 0.3s ease;
+    }
+
+    .contact-box:hover {
+      border-color: #0070BA;
+      box-shadow: 0 0 0 1px rgba(0,112,186,0.4),
+                  0 10px 25px rgba(0,112,186,0.15);
+      transform: translateY(-2px);
+    }
+
+    .contact-box i {
+      font-size: 20px;
+      color: #0070BA;
+      background: rgba(0,112,186,0.15);
+      padding: 12px;
+      border-radius: 8px;
+      min-width: 46px;
+      text-align: center;
+    }
+
+    .contact-box span {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .wa-btn {
+      display: block;
+      text-align: center;
+      margin-top: 28px;
+      padding: 14px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #25D366, #1da851);
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .wa-btn:hover {
+      box-shadow: 0 10px 25px rgba(37,211,102,0.45);
+      transform: translateY(-2px);
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 22px;
+      color: #cfe6ff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Kontak Kami</h2>
+    <p class="desc">Hubungi kami untuk konfirmasi & proses penukaran saldo PayPal</p>
+
+    <div class="contact-box">
+      <i class="fa-brands fa-paypal"></i>
+      <span>
+        <strong>Layanan</strong><br>
+        Penukaran saldo PayPal ke Rupiah
+      </span>
+    </div>
+
+    <div class="contact-box">
+      <i class="fa-solid fa-clock"></i>
+      <span>
+        <strong>Jam Operasional</strong><br>
+        Setiap hari 08.00 – 21.00 WIB
+      </span>
+    </div>
+
+    <div class="contact-box">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>
+        <strong>WhatsApp</strong><br>
+        Respon cepat & aman
+      </span>
+    </div>
+
+    <!-- GANTI NOMOR WA -->
+    <a class="wa-btn"
+       href="https://wa.me/6281119566667?text=Halo%20saya%20ingin%20menukar%20saldo%20PayPal"
+       target="_blank">
+       <i class="fa-brands fa-whatsapp"></i> Hubungi via WhatsApp
+    </a>
+
+    <a class="back" href="index.html">← Kembali ke Beranda</a>
+  </div>
+
+</body>
+</html>
