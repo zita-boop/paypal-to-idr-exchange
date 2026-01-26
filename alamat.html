@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alamat & Informasi</title>
+
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 20px;
+      background: #121a2f;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+      animation: fadeUp .6s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #0f1a33;
+      padding: 14px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+
+    .item i {
+      font-size: 20px;
+      color: #4da3ff;
+      margin-top: 3px;
+    }
+
+    .item span {
+      line-height: 1.6;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 20px;
+      color: #4da3ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Alamat & Informasi</h2>
+
+    <div class="item">
+      <i class="fa-solid fa-wallet"></i>
+      <span>
+        <strong>Layanan</strong><br>
+        Penukaran Saldo PayPal ke Rupiah
+      </span>
+    </div>
+
+    <div class="item">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>
+        <strong>Alamat</strong>
+        <br>Sambirata RT:012/004
+        <br>Sukajaya
+        <br>Cilamaya kulon
+        <br>Karawang jawa barat
+        <br>Indonesia
+      </span>
+    </div>
+
+    <div class="item">
+      <i class="fa-solid fa-clock"></i>
+      <span>
+        <strong>Jam Operasional</strong><br>
+        Setiap hari, 08.00 – 21.00 WIB
+      </span>
+    </div>
+
+    <div class="item">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>
+        <strong>Kontak</strong><br>
+        Melalui WhatsApp (menu Kontak)
+      </span>
+    </div>
+
+    <a class="back" href="index.html">← Kembali ke Beranda</a>
+  </div>
+
+</body>
+</html>
