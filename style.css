@@ -331,3 +331,12 @@ button#waBtn:disabled {
     opacity: 1;
   }
   }
+.copyright {
+  margin-top: 40px;
+  padding: 18px 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #1f4fa3;
+  background: transparent;
+  opacity: 0.85;
+  }
